@@ -1,7 +1,7 @@
 WhereWereYou::Application.routes.draw do
 
   post "/framey/callback" => "framey/videos#callback"
-  resources :videos, :only => [ :index, :show, :new], :controller => "videos"
+  resources :videos, :only => [:index, :show, :new], :controller => "videos"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,8 +50,9 @@ WhereWereYou::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  # the scratch controller is for testing...
+  match '/scratch/:action' => 'scratch#:action'
+
   root :to => "videos#index"
 
   # See how all your routes lay out with "rake routes"

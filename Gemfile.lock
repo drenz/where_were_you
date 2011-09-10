@@ -30,15 +30,11 @@ GEM
     activesupport (3.0.10)
     arel (2.0.10)
     builder (2.1.2)
-    cartographer (1.2.0)
-      haml
-      nokogiri
     crack (0.1.8)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     framey (1.2.5)
       httparty
-    haml (3.1.3)
     httparty (0.7.8)
       crack (= 0.1.8)
     i18n (0.5.0)
@@ -48,7 +44,6 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    nokogiri (1.5.0)
     polyglot (0.3.2)
     rack (1.2.3)
     rack-mount (0.6.14)
@@ -82,7 +77,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cartographer
   framey
   rails (= 3.0.10)
   sqlite3

@@ -33,5 +33,5 @@ class VideosController < ApplicationController
   def show
     @video = Video.find_by_name(params[:id])
   end
-  
+
 end

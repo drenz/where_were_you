@@ -7,8 +7,24 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div style="text-align: center">
+		<!-- begin FB Like -->
+		<div id="fb-root"></div>
+		<script>(function(d){
+		  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+		  js = d.createElement('script'); js.id = id; js.async = true;
+		  js.src = "//connect.facebook.net/en_US/all.js#appId=255045101202205&xfbml=1";
+		  d.getElementsByTagName('head')[0].appendChild(js);
+		}(document));</script>
+		<div class="fb-like" data-href="where-were-you.heroku.com" data-send="true" data-width="450" data-show-faces="true"></div>
+		<!-- end FB Like -->
 
-<%= yield %>
+		<!-- begin Tweet -->		
+		<div style="height:35px; width:150px;"><a href="http://twitter.com/share" class="twitter-share-button" data-text="Where were you on 9/11?" data-count="horizontal" data-via="WhereWereYou">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
+		<!-- end Tweet -->		
+	</div>
+
+	<%= yield %>
 
 </body>
 </html>

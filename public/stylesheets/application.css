@@ -1,0 +1,32 @@
+
+#mainHeader{
+  padding-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+  border-bottom: 6px solid #0681ab;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0pt;
+  line-height: 0pt;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+.narrow {
+	width: 990px;
+	margin: auto;
+}
+
+.center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}

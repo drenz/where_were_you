@@ -1,5 +1,8 @@
-<h1> Previously recorded videos </h1>
+<%= raw Cartographer::Header.new.to_s %>
 
+<div id="map">
+  <%= raw @map.to_html %>
+</div>
 <% if !@videos.empty? %>
 	<% @videos.each do |video|%>
 	
@@ -29,5 +32,4 @@
 
 	<%end%>
 <% else %>
-	<h3>No videos were recorded, yet </h3>
 <% end %>

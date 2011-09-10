@@ -1,7 +1,5 @@
 
 class VideosController < ApplicationController
-  layout 'framey'
-  
   def new
   
   end

@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110910183343) do
+ActiveRecord::Schema.define(:version => 20110910221922) do
 
   create_table "videos", :force => true do |t|
     t.string   "name"
-    t.integer  "filesize",             :default => 0
+    t.integer  "filesize",                                             :default => 0
     t.float    "duration"
     t.string   "state"
     t.integer  "views"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(:version => 20110910183343) do
     t.string   "small_thumbnail_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
+    t.string   "person_name"
+    t.string   "twitter_handle"
+    t.decimal  "latitude",             :precision => 15, :scale => 10
+    t.decimal  "longitude",            :precision => 15, :scale => 10
   end
 
 end

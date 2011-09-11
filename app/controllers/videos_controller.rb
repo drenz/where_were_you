@@ -1,7 +1,7 @@
 
 class VideosController < ApplicationController
   def new
-  
+    @video = Video.new
   end
   
   # framey callback
@@ -34,23 +34,17 @@ class VideosController < ApplicationController
                                     :zoom => 14,
                                     :controls => [:zoom]
                                  )
-#   @map.zoom = :bound
+    markers = []
     @icon = Cartographer::Gicon.new()
     @map.icons <<  @icon
-    marker1 = Cartographer::Gmarker.new(:name=> "taj_mahal", :marker_type => "Building",
-               :position => [27.173006,78.042086],
-               :info_window_url => "/url_for_info_content", :icon => @icon)
-
-    marker2 = Cartographer::Gmarker.new(:name=> "wtc", :marker_type => "Building",
-               :position => wtc,
-               :info_window_url => "/url_for_info_content", :icon => @icon)
-    marker3 = Cartographer::Gmarker.new(:name=> "raj_bhawan", :marker_type => "Building",
-               :position => [28.614309,77.201353],
-               :info_window_url => "/url_for_info_content", :icon => @icon)
-
-    @map.markers << marker1
-    @map.markers << marker2
-    @map.markers << marker3
+    
+    @videos.each do |video|
+      marker1 = Cartographer::Gmarker.new(:name=> "taj_mahal", :marker_type => "Building",
+                 :position => [video.latitude,video.longitude],
+                 :info_window_url => "/videos/#{video.id}", :icon => @icon)
+    end
+    
+    
   end
   
   def show

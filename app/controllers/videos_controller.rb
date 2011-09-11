@@ -39,11 +39,11 @@ class VideosController < ApplicationController
     @map.icons <<  @icon
     
     @videos.each do |video|
-      marker1 = Cartographer::Gmarker.new(:name=> "taj_mahal", :marker_type => "Building",
+      marker = Cartographer::Gmarker.new(:name=> "taj_mahal", :marker_type => "Building",
                  :position => [video.latitude,video.longitude],
                  :info_window_url => "/videos/#{video.id}", :icon => @icon)
+      @map.markers << marker
     end
-    
     
   end
   
